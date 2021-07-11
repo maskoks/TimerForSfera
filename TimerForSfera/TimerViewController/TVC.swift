@@ -119,7 +119,7 @@ class TimerViewController: UIViewController  {
         }
         
         timers.append(TimerModel(title: timerTitle, seconds: timerSeconds))
-        timers.sort(by: {$0.seconds < $1.seconds } )
+        timers.sort(by: {$0.seconds > $1.seconds } )
         titleTextField.text = nil
         secondsTextField.text = nil
         tableView.reloadData()
